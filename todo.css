@@ -342,6 +342,11 @@ footer {
         margin-bottom: 20px;
         background: #8536bbe1;
     }
+    
+    #new-task-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: none;
+    }
 
     #blank-alert {
         width: 382px;
@@ -388,6 +393,11 @@ footer {
     #new-task-input {
         width: 270px;
     }
+    
+    #new-task-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: none;
+    }
 
     #blank-alert {
         width: 364px;
@@ -401,6 +411,11 @@ footer {
 @media only screen and (max-width:430px) {
     header {
         width: 330px;
+    }
+    
+    #new-task-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: none;
     }
 
     main {
@@ -420,6 +435,11 @@ footer {
 
     #new-task-input {
         width: 250px;
+    }
+    
+    #new-task-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: none;
     }
 
     main {
