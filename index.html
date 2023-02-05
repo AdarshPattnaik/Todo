@@ -1,0 +1,94 @@
+<!-- Initiation of the HTML Source Code -->
+<!-- HTML Declaration -->
+<!DOCTYPE html>
+<html lang='en'>
+<!-- HTML head -->
+<head>
+    <!-- Meta-tags -->
+    <meta charset='UTF-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    
+    <!-- Title of the web-page -->
+    <title>Task List</title>
+    
+    <!-- External CSS Stylesheet -->
+    <link rel='stylesheet' href='todo.css'/>
+
+    <!-- Fonts: -->
+    <!-- header -->
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Ramabhadra&display=swap" rel="stylesheet">
+
+    <!-- input form -->
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+
+    <!-- task list -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=PT+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet"> 
+
+    <!-- footer -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto&display=swap" rel="stylesheet"> 
+
+</head>
+
+<!-- HTML Body -->
+<body>
+    
+    <!-- Header: -->
+    <header>
+        <h1>Welcome to Task List</h1>
+        <form id="new-task-form">
+            <input 
+                type="text" 
+                id="new-task-input"
+                placeholder="What do you have planned?" />
+
+            <input 
+                type="submit" 
+                id="new-task-submit"
+                value="Add Task" />
+        </form>
+        <div id="blank-alert">
+            <!-- <p>&#10680;</p>
+            <span>Task cannot be empty</span> -->
+        </div>
+    </header>
+
+    <main>
+
+        <section class="task-list">
+            <h2>Tasks</h2>
+
+            <div id="tasks">
+
+                <!-- Task: -->
+                
+                <!-- <div class="task">
+                    <div class="content">
+                        <input 
+                        type="text"
+                        class="text"
+                        value="Sample task"
+                        readonly />
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit"><img src="edit-pen.png" alt="image/edit"></button>
+                        <button class="delete"><img src="delete.png" alt="image/delete"></button>
+                    </div>
+                </div>  -->
+               
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Copyright &copy; 2023-24 | Design by Adarsh
+    </footer>
+    
+    <!-- External JavaScript: -->
+    <script src='todo.js'></script>
+</body>
+</html>
+<!-- Termination of the HTML Source Code -->

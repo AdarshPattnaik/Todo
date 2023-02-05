@@ -1,0 +1,428 @@
+/* This CSS style-sheet is for the beautification of the webpage */
+
+/* Initiation of the CSS Source Code */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling of the webpage */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Root Variables: */
+:root {
+    --dark: #130018;
+}
+
+/* Avoiding right white-space */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* HTML Body */
+body {
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: " ";
+    background: url('Flower-bg.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    opacity: 0.6;
+    filter: blur(2.5px);
+    z-index: -1;
+    -webkit-filter: blur(2.5px);
+}
+
+header {
+    margin-top: 45px;
+    background: rgba(255, 255, 255, 0.4);
+    height: 200px;
+    width: 850px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) inset, 0px 0px 10px rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+header h1 {
+    font-family: 'Days One', sans-serif;
+    font-size: 2.8rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 20px rgba(80, 0, 90, 0.3);
+    margin-bottom: 10px;
+}
+
+#new-task-form {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #8800e2e1;
+    animation: fadeBorder 2s infinite;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4), 0px 0px 5px rgba(255, 255, 255, 0.4) inset;
+    height: 45px;
+    width: 400px;
+    margin-right: 20px;
+    padding: 5px 15px;
+    -webkit-animation: fadeBorder 2s infinite;
+}
+
+@keyframes fadeBorder {
+    0%{
+      box-shadow: 0px 0px 4px white inset, 0px 0px 5px white;
+    }
+    50%{
+      box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3) inset, 0px 0px 5px rgba(255, 255, 255, 0.3);
+    }
+    100%{
+      box-shadow: 0px 0px 4px white inset, 0px 0px 5px white;
+    }
+}
+
+#new-task-input::placeholder {
+    color: rgb(255, 255, 255);
+    font-family: none;
+}
+
+#new-task-submit {
+    font-family: 'Hammersmith One', sans-serif;
+    background: linear-gradient(120deg, #cc00ff 0%, #00e1ff 100%);
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    height: 45px;
+    width: 90px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.9;
+    box-shadow: 0px 0px 5px white inset, 0px 0px 5px white;
+}
+
+#blank-alert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent;
+    color: rgb(230, 0, 0);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+    width: 500px;
+    height: 15px;
+    pointer-events: none;
+}
+
+#blank-alert p {
+    margin-right: 2px;
+    font-size: 15px;
+}
+
+#blank-alert span {
+    margin-top: 2px;
+    font-size: 11.5px;
+}
+
+main {
+    margin: 0 auto;
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    width: 880px;
+}
+
+.task-list {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) inset, 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.task-list h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 5px rgba(90, 0, 80, 0.3);
+    margin-bottom: 1rem;
+}
+
+#tasks {
+    font-family: 'Hammersmith One', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#tasks .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8c0cac;
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6) inset, 0px 0px 5px rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+    font-family: 'PT Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 15px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: rgba(255, 251, 0, 0.9);
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.edit:active {
+    opacity: 0.7;
+    filter: drop-shadow(0px 0px 5px rgb(0, 140, 255)) drop-shadow(0px 0px 5px rgb(0, 140, 255)) drop-shadow(0px 0px 5px rgb(0, 140, 255));
+    -webkit-filter: drop-shadow(0px 0px 5px rgb(0, 140, 255)) drop-shadow(0px 0px 5px rgb(0, 140, 255)) drop-shadow(0px 0px 5px rgb(0, 140, 255));
+}
+
+.delete:active {
+    opacity: 0.7;
+    filter: drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 5px red);
+    -webkit-filter: drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 5px red);
+}
+
+.edit img {
+    width: 20px;
+    filter: invert(1) brightness(200%);
+}
+
+.delete img {
+    width: 20px;
+    filter: invert(1);
+}
+
+.save {
+    width: 20px;
+    filter: invert(1) brightness(200%);
+}
+
+.save:active {
+    opacity: 1;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.384);
+    color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsiveness */
+@media only screen and (max-width:920px) {
+    header {
+        width: 600px;
+        height: 180px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #new-task-input {
+        width: 280px;
+    }
+
+    #blank-alert {
+        width: 382px
+    }
+
+    main {
+        width: 630px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    header {
+        width: 470px;
+        height: 220px;
+        padding-bottom: 40px
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    #new-task-form {
+        flex-direction: column;
+        margin-bottom: -58px;
+    }
+
+    #new-task-input {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        background: #8536bbe1;
+    }
+
+    #blank-alert {
+        width: 382px;
+        margin: 0 0 0px 105px;
+        position: relative;
+        padding: 0 0 20px 0;
+    }
+
+    #blank-alert p {
+        font-size: 14px;
+    }
+
+    #blank-alert span {
+        font-size: 10.5px;
+    }
+
+    main {
+        width: 503px;
+    }
+
+    #tasks .task {
+        background-color: #9b1dba;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media only screen and (max-width:520px) {
+    body::before {
+        opacity: 0.4;
+    }
+
+    header {
+        width: 400px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #new-task-input {
+        width: 270px;
+    }
+
+    #blank-alert {
+        width: 364px;
+    }
+
+    main {
+        width: 433px;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    header {
+        width: 330px;
+    }
+
+    main {
+        width: 360px;
+    }
+}
+
+@media only screen and (max-width:355px) {
+    header {
+        width: 300px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+        font-weight: bolder;
+    }
+
+    #new-task-input {
+        width: 250px;
+    }
+
+    main {
+        width: 330px;
+    }
+}
