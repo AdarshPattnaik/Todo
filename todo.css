@@ -94,8 +94,8 @@ button {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    color: white;
-    background: #8800e2e1;
+    color: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     animation: fadeBorder 2s infinite;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -112,18 +112,18 @@ button {
 
 @keyframes fadeBorder {
     0%{
-      box-shadow: 0px 0px 4px white inset, 0px 0px 5px white;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) inset;
     }
     50%{
-      box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3) inset, 0px 0px 5px rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9) inset;
     }
     100%{
-      box-shadow: 0px 0px 4px white inset, 0px 0px 5px white;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) inset;
     }
 }
 
 #new-task-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.4);
     font-family: none;
 }
 
@@ -340,12 +340,6 @@ footer {
     #new-task-input {
         margin-right: 0px;
         margin-bottom: 20px;
-        background: #8536bbe1;
-    }
-    
-    #new-task-input::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-        font-family: none;
     }
 
     #blank-alert {
@@ -395,7 +389,7 @@ footer {
     }
     
     #new-task-input::placeholder {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(0, 0, 0, 0.3);
         font-family: none;
     }
 
@@ -413,11 +407,6 @@ footer {
         width: 330px;
     }
     
-    #new-task-input::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-        font-family: none;
-    }
-
     main {
         width: 360px;
     }
@@ -436,12 +425,7 @@ footer {
     #new-task-input {
         width: 250px;
     }
-    
-    #new-task-input::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-        font-family: none;
-    }
-
+   
     main {
         width: 330px;
     }
