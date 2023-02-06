@@ -373,7 +373,7 @@ footer {
 
 @media only screen and (max-width:520px) {
     body::before {
-        opacity: 0.4;
+        opacity: 0.45;
     }
 
     header {
