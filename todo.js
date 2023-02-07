@@ -68,7 +68,8 @@ function showTask() {
             </div>
         </div> 
         
-        <div id="blacken${index}" class="blacken"> <div class="delete_cont">
+        <div id="blacken${index}" class="blacken"> 
+            <div class="delete_cont">
                 <span onclick="document.querySelector('.blacken').style.display = 'none'" class="close" title="close">&times;</span>
                 <div class="delete_txt">
                     <img src="delete-modal.png" alt="del/img">
