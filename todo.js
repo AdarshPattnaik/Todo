@@ -72,7 +72,7 @@ function showTask() {
             <div class="delete_cont">
                 <span onclick="document.querySelector('.blacken').style.display = 'none'" class="close" title="close">&times;</span>
                 <div class="delete_txt">
-                    <img src="../Images/delete-modal.png" alt="del/img">
+                    <img src="delete-modal.png" alt="del/img">
                     <h2>Are you sure?</h2>
                     <p>Do you really want to delete this task? This process cannot be undone.</p>
                 </div>
