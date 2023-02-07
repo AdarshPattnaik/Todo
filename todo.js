@@ -70,14 +70,14 @@ function showTask() {
         
         <div id="blacken${index}" class="blacken"> 
             <div class="delete_cont">
-                <span onclick="document.querySelector('.blacken').style.display = 'none'" class="close" title="close">&times;</span>
+                <span onclick="document.querySelector('#blacken${index}').style.display = 'none'" class="close" title="close">&times;</span>
                 <div class="delete_txt">
                     <img src="delete-modal.png" alt="del/img">
                     <h2>Are you sure?</h2>
                     <p>Do you really want to delete this task? This process cannot be undone.</p>
                 </div>
                 <div class="delete_actions">
-                    <button onclick="document.querySelector('.blacken').style.display = 'none'" class="cancel">
+                    <button onclick="document.querySelector('#blacken${index}').style.display = 'none'" class="cancel">
                         Cancel
                     </button>
                     <button class="delete_btn">
@@ -142,6 +142,6 @@ function popup(index) {
     v.style.display = 'block';
     v.querySelector('.delete_cont').querySelector('.delete_actions').querySelector('.delete_btn').addEventListener('click', () => {
         deleteTask(index);
-        document.querySelector('.blacken').style.display = 'none';
+        v.style.display = 'none';
     });
 }
