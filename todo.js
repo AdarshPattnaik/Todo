@@ -137,7 +137,7 @@ function deleteTask(index) {
 
 // Popup Modal:
 function popup(index) {
-    let v = document.querySelector('#blacken${index}');
+    let v = document.querySelector(`#blacken${index}`);
     v.style.display = 'block';
     v.querySelector('.delete_cont').querySelector('.delete_actions').querySelector('.delete_btn').addEventListener('click', () => {
         deleteTask(index);
