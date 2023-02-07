@@ -54,19 +54,39 @@ function showTask() {
     notesObj.forEach(function (element, index) {
         html += `
         <div class="task">
-        <div class="content">
-            <input 
-            type="text"
-            class="text"
-            value="${element}" 
-            readonly />
-        </div>
+            <div class="content">
+                <input 
+                type="text"
+                class="text"
+                value="${element}" 
+                readonly />
+            </div>
 
-        <div class="actions">
-            <button id="Edit${index}" onclick="editTask(this.id)" class="edit"><img src="edit-pen.png" alt="image/edit"></button>
-            <button id="${index}" onclick="deleteTask(this.id)" class="delete"><img src="delete.png" alt="image/delete"></button>
-        </div>
+            <div class="actions">
+                <button id="Edit${index}" onclick="editTask(this.id)" class="edit"><img src="edit-pen.png" alt="image/edit"></button>
+                <button id="${index}" onclick="popup(this.id)" class="delete"><img src="delete.png" alt="image/delete"></button>
+            </div>
         </div> 
+        
+        <div class="blacken">
+            <div class="delete_cont">
+                <span onclick="document.querySelector('.blacken').style.display = 'none'" class="close" title="close">&times;</span>
+                <div class="delete_txt">
+                    <img src="../Images/delete-modal.png" alt="del/img">
+                    <h2>Are you sure?</h2>
+                    <p>Do you really want to delete this task? This process cannot be undone.</p>
+                </div>
+                <div class="delete_actions">
+                    <button onclick="document.querySelector('.blacken').style.display = 'none'" class="cancel">
+                        Cancel
+                    </button>
+                    <button class="delete_btn">
+                        Delete
+                    </button>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
         `;
     });
     let notesElm = document.getElementById('tasks');
@@ -98,7 +118,6 @@ function editTask(index) {
         localStorage.setItem("task_array", JSON.stringify(notesObj));
         showTask();
     }
-
 }
 
 // Function to delete a task:
@@ -115,4 +134,13 @@ function deleteTask(index) {
     notesObj.splice(index, 1);
     localStorage.setItem("task_array", JSON.stringify(notesObj));
     showTask();
+}
+
+// Popup Modal:
+function popup(index) {
+    document.querySelector('.blacken').style.display = 'block';
+    document.querySelector('.delete_btn').addEventListener('click', () => {
+        deleteTask(index);
+        document.querySelector('.blacken').style.display = 'none';
+    });
 }
