@@ -281,6 +281,108 @@ main {
     opacity: 1;
 }
 
+/* Delete Modal */
+.blacken {
+    display: none;
+}
+
+.delete_cont {
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 1px;
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+}
+
+.delete_cont.active {
+    transform: translate(-50%, -50%);
+}
+
+.delete_txt img {
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 32%;
+}
+
+.close {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: -2%;
+    color: rgba(0, 0, 0, 0.5);
+    float: right;
+    cursor: pointer;
+}
+
+.delete_txt h2 {
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.95);
+}
+
+.delete_txt p {
+    margin-top: 13px;
+    margin-bottom: 15px;
+    padding: 0 5% 0 5%;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.delete_actions {
+    display: flex;
+}
+
+.cancel {
+    width: 50%;
+    height: 6vh;
+    color: white;
+    background: rgb(66, 148, 241);
+    margin-right: 1%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.delete_btn {
+    width: 50%;
+    height: 6vh;
+    color: white;
+    background: rgb(240, 7, 7);
+    margin-left: 1%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Footer */
 footer {
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
@@ -318,6 +420,12 @@ footer {
 
     main {
         width: 630px;
+    }
+}
+
+@media only screen and (max-width:720px) {
+    .delete_cont {
+        max-width: 70%;
     }
 }
 
@@ -391,6 +499,10 @@ footer {
     #new-task-input::placeholder {
         color: rgba(0, 0, 0, 0.3);
         font-family: none;
+    }
+    
+    .delete_cont {
+        max-width: 80%;
     }
 
     #blank-alert {
