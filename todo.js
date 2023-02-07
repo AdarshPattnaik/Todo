@@ -68,8 +68,7 @@ function showTask() {
             </div>
         </div> 
         
-        <div class="blacken">
-            <div class="delete_cont">
+        <div id="blacken${index}" class="blacken"> <div class="delete_cont">
                 <span onclick="document.querySelector('.blacken').style.display = 'none'" class="close" title="close">&times;</span>
                 <div class="delete_txt">
                     <img src="delete-modal.png" alt="del/img">
@@ -138,8 +137,9 @@ function deleteTask(index) {
 
 // Popup Modal:
 function popup(index) {
-    document.querySelector('.blacken').style.display = 'block';
-    document.querySelector('.delete_btn').addEventListener('click', () => {
+    let v = document.querySelector('#blacken${index}');
+    v.style.display = 'block';
+    v.querySelector('.delete_cont').querySelector('.delete_actions').querySelector('.delete_btn').addEventListener('click', () => {
         deleteTask(index);
         document.querySelector('.blacken').style.display = 'none';
     });
